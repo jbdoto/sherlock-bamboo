@@ -3,11 +3,10 @@ package com.jeffdoto.sherlock.bamboo.messaging;
 import com.rabbitmq.client.ConnectionFactory;
 
 /**
- * Created by IntelliJ IDEA.
+ * Basic Configuration class for a Messager.
  * User: jdoto200
  * Date: 2/13/12
  * Time: 9:25 PM
- * To change this template use File | Settings | File Templates.
  */
 public class MessagerConfig {
 

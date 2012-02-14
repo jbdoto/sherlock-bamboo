@@ -8,7 +8,7 @@
 
     <bambooEventListener key="buildStateListener.event" name="Build State Listener"
                          class="com.jeffdoto.sherlock.bamboo.BuildStateListener">
-        <description>Listens for events and adds them to a message queue if enabled.</description>
+        <description>Listens for BuildComplete events and sends a message to a configured destination.</description>
     </bambooEventListener>
 
 </atlassian-plugin>

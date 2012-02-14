@@ -9,11 +9,10 @@ import org.springframework.beans.factory.annotation.Required;
 import java.io.IOException;
 
 /**
- * Created by IntelliJ IDEA.
+ * Sends messages to a RabbitMQ Queue.
  * User: jdoto200
  * Date: 2/13/12
  * Time: 10:01 PM
- * To change this template use File | Settings | File Templates.
  */
 public class RabbitMessager implements AmqpMessager{
 
@@ -24,6 +23,11 @@ public class RabbitMessager implements AmqpMessager{
     @Override
     public String getExchangeName() {
         return messagerConfig.getExchangeName();
+    }
+
+    @Override
+    public String getTopicName() {
+        return messagerConfig.getCompletedTopicName();
     }
 
     @Override

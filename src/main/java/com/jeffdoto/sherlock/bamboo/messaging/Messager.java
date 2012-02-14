@@ -1,11 +1,10 @@
 package com.jeffdoto.sherlock.bamboo.messaging;
 
 /**
- * Created by IntelliJ IDEA.
+ * A Generic Interface for Messager.  Sends a message and has a name.  Not too exciting.
  * User: jdoto200
  * Date: 2/13/12
  * Time: 10:37 PM
- * To change this template use File | Settings | File Templates.
  */
 public interface Messager {
     void sendMessage(String message);

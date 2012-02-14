@@ -10,12 +10,32 @@
     <version>1.0-SNAPSHOT</version>
 
     <organization>
-        <name>Example Company</name>
         <url>http://www.jeffdoto.com/</url>
     </organization>
-
+    <scm>
+        <connection>
+            git@github.com:jbdoto/sherlock.git
+        </connection>
+    </scm>
+    <contributors>
+        <contributor>
+            <name>Jeffrey B. Doto</name>
+            <email>jeffdoto@gmail.com</email>
+            <roles>
+                <role>Catalyst</role>
+                <role>Prophet of Change</role>
+            </roles>
+        </contributor>
+    </contributors>
+    <inceptionYear>2012</inceptionYear>
+    <licenses>
+        <license>
+            <name>GNU General Public License</name>
+        </license>
+    </licenses>
     <name>sherlock-bamboo</name>
-    <description>This is the com.jeffdoto.sherlock.bamboo:sherlock-bamboo plugin for Atlassian Bamboo.</description>
+
+    <description>The Sherlock Messaging Plugin for Atlassian Bamboo.</description>
     <packaging>atlassian-plugin</packaging>
 
     <properties>

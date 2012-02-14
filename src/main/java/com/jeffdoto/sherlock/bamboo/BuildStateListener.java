@@ -9,10 +9,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Required;
 
 /**
+ * Listens for Bamboo Build Lifecycle events.
+ *
+ * Sends a message to a configured messaging entity announcing the received event Plan Information, Build Number,
+ * and State.
  * User: jdoto200
  * Date: 1/29/12
  * Time: 10:55 PM
- * To change this amqpTemplate use File | Settings | File Templates.
  */
 public class BuildStateListener implements HibernateEventListener {
 
