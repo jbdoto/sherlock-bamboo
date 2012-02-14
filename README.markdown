@@ -6,7 +6,7 @@ at `src/main/resources/META-INF/spring`.
 
 ##INSTALLATION:
 Install the built jar through Bamboo's web-based plugin management page.
-You will most likely need to tweak the `host` property to something other than `localhost`.
+You will most likely need to tweak the `host` property to something other than *localhost*.
 
 Leap for joy when your messages appear in your queue!
 
