@@ -1,4 +1,4 @@
-#Thanks for using the Sherlock Bamboo Messaging Plugin!
+#Thanks for Using the Sherlock Bamboo Messaging Plugin!
 
 ##DESCRIPTION:
 Out of the box, Sherlock will talk to a Rabbit MQ Instance, configured via the `spring-context.xml` file, located
