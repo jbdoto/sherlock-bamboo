@@ -17,7 +17,7 @@ import org.springframework.beans.factory.annotation.Required;
 public class BuildStateListener implements HibernateEventListener {
 
     Logger logger = LoggerFactory.getLogger(BuildStateListener.class);
-    Messager messager;
+    private Messager messager;
 
     @Override
     public void handleEvent(Event event) {
@@ -27,7 +27,7 @@ public class BuildStateListener implements HibernateEventListener {
             messager.sendMessage(
                     String.format(((BuildCompletedEvent) event).getBuildPlanKey()
                             + " Build #" + ((BuildCompletedEvent) event).getBuildNumber()
-                            + " completed with a result of " + ((BuildCompletedEvent) event).getBuildState()));
+                            + " completed with a result of " + ((BuildCompletedEvent) event).getBuildState()).toUpperCase());
         }
     }
 

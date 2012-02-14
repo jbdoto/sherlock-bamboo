@@ -32,7 +32,6 @@
             <version>${bamboo.version}</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>com.rabbitmq</groupId>
             <artifactId>amqp-client</artifactId>
