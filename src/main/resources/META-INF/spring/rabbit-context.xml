@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd"
+             default-autowire="autodetect">
+
+    <beans:bean name="placeholderConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <beans:property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <beans:property name="locations">
+            <beans:list>
+                <beans:value>classpath:sherlock.properties</beans:value>
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="messager" class="com.jeffdoto.sherlock.bamboo.messaging.RabbitMessager">
+        <beans:property name="messagerConfig" ref="messagerConfig"/>
+    </beans:bean>
+    
+    <beans:bean id="connectionFactory" class="com.rabbitmq.client.ConnectionFactory">
+        <beans:property name="host" value="${message.server.hostname}"/>
+        <beans:property name="port" value="${message.server.port}"/>
+    </beans:bean>
+    
+    <beans:bean id="messagerConfig" class="com.jeffdoto.sherlock.bamboo.messaging.MessagerConfig">
+        <beans:property name="connectionFactory" ref="connectionFactory"/>
+        <beans:property name="exchangeName" value="${message.exchange.name}"/>
+        <beans:property name="completedTopicName" value="${message.topic.address}"/>
+    </beans:bean>
+
+</beans:beans>
