@@ -1,0 +1,14 @@
+#Thanks for using the Sherlock Bamboo Messaging Plugin!
+
+##DESCRIPTION:
+Out of the box, Sherlock will talk to a Rabbit MQ Instance, configured via the `<spring-context.xml>` file, located
+at `<src/main/resources/META-INF/spring>`.
+
+##INSTALLATION:
+Install the built jar through Bamboo's web-based plugin management page.
+You will most likely need to tweak the `<host>` property to something other than `<localhost>`.
+
+Leap for joy when your messages appear in your queue!
+
+##NOTES:
+The external `<sherlock.properties>` config file is not yet active.
